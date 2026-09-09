@@ -1,0 +1,2 @@
+import { leaders } from "./choir/data";
+export default function LeadershipGrid() { return <div className="leader-grid">{leaders.map((leader, index) => <article className="leader-card" key={leader[0]}><div className={`leader-avatar avatar-${index + 1}`}><span>{leader[2]}</span></div><div className="leader-meta"><span>0{index + 1}</span><h3>{leader[0]}</h3><p>{leader[1]}</p></div></article>)}</div>; }

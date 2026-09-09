@@ -1,0 +1,4 @@
+"use client";
+import { useState } from "react";
+import { events } from "./choir/data";
+export default function EventsCalendar() { const [filter, setFilter] = useState("All"); const shown = filter === "All" ? events : events.filter((item) => item[0] === filter); return <><div className="filter-list">{["All", "Services", "Concerts", "Rehearsals"].map((name) => <button className={filter === name ? "selected" : ""} key={name} onClick={() => setFilter(name)}>{name}</button>)}</div><div className="events-list">{shown.map((item) => <article className="event-row" key={item[3]}><div className="event-date"><strong>{item[1]}</strong><span>{item[2]}</span></div><div className="event-info"><span className="event-type">{item[0]}</span><h3>{item[3]}</h3></div><div className="event-detail"><span>{item[4]}</span><span>{item[5]}</span></div><button className="circle-arrow" aria-label={`View details for ${item[3]}`}>↗</button></article>)}</div></>; }
