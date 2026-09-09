@@ -1,2 +1,2 @@
-import Timeline from "../components/Timeline";
+import Timeline from "../../components/Timeline";
 export default function HistoryPage() { return <main><section className="intro section"><div className="section-label"><span>02</span><span>Heritage timeline</span></div><div className="intro-grid"><div><p className="eyebrow">A century of service</p><h1>Our story is<br /><em>still being sung.</em></h1></div><p className="body-large">From a sacred beginning in 1919 to a living ministry today, every generation has added its voice.</p></div><Timeline /></section></main>; }

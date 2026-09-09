@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import "./globals.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 
 const sans = DM_Sans({
   variable: "--font-sans",
@@ -34,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         <link rel="icon" href="/favicon.ico?v=3" type="image/x-icon" />
       </head>
-      <body className="min-h-full flex flex-col"><Header />{children}<Footer /></body>
+      <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }

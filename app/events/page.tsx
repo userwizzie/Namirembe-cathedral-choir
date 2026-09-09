@@ -1,2 +1,0 @@
-import EventsCalendar from "../components/EventsCalendar";
-export default function EventsPage() { return <main><section className="events section"><div className="section-label"><span>05</span><span>Gather with us</span></div><div className="section-heading-row"><div><p className="eyebrow">The calendar</p><h1>Make a joyful <em>noise.</em></h1></div><p className="body-copy">Join us for services, concerts, rehearsals and special celebrations at Namirembe Cathedral.</p></div><EventsCalendar /></section></main>; }

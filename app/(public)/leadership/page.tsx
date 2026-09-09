@@ -1,2 +1,2 @@
-import LeadershipGrid from "../components/LeadershipGrid";
+import LeadershipGrid from "../../components/LeadershipGrid";
 export default function LeadershipPage() { return <main><section className="dark-section section"><div className="section-label light-border"><span>03</span><span>Leadership</span></div><div className="section-heading-row"><div><p className="eyebrow light">The people behind the music</p><h1 className="light-text">Led with <em>purpose.</em></h1></div><p className="body-copy light-text muted">Musicians, mentors and servants committed to excellence in every note.</p></div><LeadershipGrid /></section></main>; }
