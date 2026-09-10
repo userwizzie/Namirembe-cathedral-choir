@@ -1,0 +1,11 @@
+import Link from "next/link";
+
+const pathways = [
+  ["Music Projects", "Support new scores, recording sessions, rehearsals, and the choir's sacred repertoire."],
+  ["Instrument Acquisition", "Help maintain and expand the instruments that support cathedral worship."],
+  ["Robes & Repertoire Fund", "Contribute to chorister robes, music folders, printed scores, and service materials."],
+];
+
+export default function DonatePage() {
+  return <main><section className="donate-hero section"><div className="section-label light-border"><span>09</span><span>Support the ministry</span></div><div className="donate-heading"><p className="eyebrow light">A gift with purpose</p><h1 className="light-text">Help the choir<br /><em>keep singing.</em></h1><p className="body-copy light-text muted">Your support sustains sacred music, develops choristers, and helps Namirembe Cathedral Choir serve each generation with excellence.</p></div></section><section className="intro section"><p className="eyebrow">Where your support goes</p><h2>Give toward<br /><em>the sound.</em></h2><div className="support-pathways">{pathways.map(([title, text], index) => <article key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{text}</p></article>)}</div></section><section className="donate-details section"><div><p className="eyebrow light">Ways to give</p><h2 className="light-text">Support the<br /><em>ministry.</em></h2></div><div className="giving-details"><article><span>Mobile Money</span><strong>Contact the choir office</strong><p>Call +256 700 000 000 for the current mobile money giving number and reference instructions.</p></article><article><span>Bank Transfer</span><strong>Namirembe Cathedral Choir</strong><p>Contact the cathedral office for verified account details before making a transfer.</p></article><article><span>In person</span><strong>Namirembe Cathedral</strong><p>Namirembe Hill Road, Kampala, Uganda. Speak with the choir administrator after a service or contact the office to arrange a contribution.</p></article><Link className="button button-light" href="https://www.google.com/maps/search/?api=1&query=Namirembe+Cathedral%2C+Namirembe+Hill%2C+Kampala%2C+Uganda" target="_blank">Get directions <span>↗</span></Link></div></section></main>;
+}

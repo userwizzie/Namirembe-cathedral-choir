@@ -32,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         <link rel="icon" href="/favicon.ico?v=3" type="image/x-icon" />
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col"><div className="site-slideshow" aria-hidden="true" />{children}</body>
     </html>
   );
 }
