@@ -1,8 +1,117 @@
 import Link from "next/link";
 import HeroSection from "../components/HeroSection";
 import LeadershipGrid from "../components/LeadershipGrid";
+import RecurringSchedule from "../components/RecurringSchedule";
 import { events } from "../components/choir/data";
 
 export default function Home() {
-  return <main><HeroSection /><section className="intro section"><div className="section-label"><span>01</span><span>Our heritage</span></div><div className="intro-grid"><div><p className="eyebrow">A living legacy</p><h2>More than a choir.<br /><em>A ministry.</em></h2></div><div><p className="body-large">For over a century, Namirembe Cathedral Choir has enriched worship with a sound that is deeply rooted and always reaching forward.</p><p className="body-copy">From the first note to the final amen, music is a form of service. Our rehearsals build character, brotherhood and devotion.</p><Link className="text-link dark" href="/about">Discover our story <span>→</span></Link></div></div></section><section className="dark-section section"><div className="section-label light-border"><span>02</span><span>Our ministry</span></div><div className="section-heading-row"><div><p className="eyebrow light">The people behind the music</p><h2 className="light-text">Led with <em>purpose.</em></h2></div><Link className="text-link light" href="/leadership">Meet our leadership <span>→</span></Link></div><LeadershipGrid /></section><section className="events section"><div className="section-label"><span>03</span><span>Gather with us</span></div><div className="section-heading-row"><div><p className="eyebrow">The calendar</p><h2>Make a joyful <em>noise.</em></h2></div><Link className="text-link dark" href="/events">View all events <span>→</span></Link></div><div className="events-list">{events.slice(0, 3).map((item) => <article className="event-row" key={item[3]}><div className="event-date"><strong>{item[1]}</strong><span>{item[2]}</span></div><div className="event-info"><span className="event-type">{item[0]}</span><h3>{item[3]}</h3></div><div className="event-detail"><span>{item[4]}</span><span>{item[5]}</span></div></article>)}</div></section><section className="join-section"><div className="join-art" aria-hidden="true"><span>♪</span><span>♫</span><span>♬</span></div><div className="join-content"><p className="eyebrow light">Your voice belongs here</p><h2 className="light-text">Come sing<br /><em>with us.</em></h2><p className="body-copy light-text muted">Discover the joy of serving through music.</p><Link className="button button-light" href="/join">Join the choir <span>↗</span></Link></div></section></main>;
+  return (
+    <main>
+      <HeroSection />
+      <section className="intro section">
+        <div className="section-label">
+          <span>01</span>
+          <span>Our heritage</span>
+        </div>
+        <div className="intro-grid">
+          <div>
+            <p className="eyebrow">A living legacy</p>
+            <h2>
+              More than a choir.
+              <br />
+              <em>A ministry.</em>
+            </h2>
+          </div>
+          <div>
+            <p className="body-large">
+              For over a century, Namirembe Cathedral Choir has enriched worship
+              with a sound that is deeply rooted and always reaching forward.
+            </p>
+            <p className="body-copy">
+              From the first note to the final amen, music is a form of service.
+              Our rehearsals build character, brotherhood and devotion.
+            </p>
+            <Link className="text-link dark" href="/about">
+              Discover our story <span>→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section className="dark-section section">
+        <div className="section-label light-border">
+          <span>02</span>
+          <span>Our ministry</span>
+        </div>
+        <div className="section-heading-row">
+          <div>
+            <p className="eyebrow light">The people behind the music</p>
+            <h2 className="light-text">
+              Led with <em>purpose.</em>
+            </h2>
+          </div>
+          <Link className="text-link light" href="/leadership">
+            Meet our leadership <span>→</span>
+          </Link>
+        </div>
+        <LeadershipGrid />
+      </section>
+      <section className="events section">
+        <div className="section-label">
+          <span>03</span>
+          <span>Gather with us</span>
+        </div>
+        <div className="section-heading-row">
+          <div>
+            <p className="eyebrow">The calendar</p>
+            <h2>
+              Make a joyful <em>noise.</em>
+            </h2>
+          </div>
+          <Link className="text-link dark" href="/events">
+            View all events <span>→</span>
+          </Link>
+        </div>
+        <div className="events-list">
+          {events.slice(0, 3).map((item) => (
+            <article className="event-row" key={item[3]}>
+              <div className="event-date">
+                <strong>{item[1]}</strong>
+                <span>{item[2]}</span>
+              </div>
+              <div className="event-info">
+                <span className="event-type">{item[0]}</span>
+                <h3>{item[3]}</h3>
+              </div>
+              <div className="event-detail">
+                <span>{item[4]}</span>
+                <span>{item[5]}</span>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+      <RecurringSchedule />
+      <section className="join-section">
+        <div className="join-art" aria-hidden="true">
+          <span>♪</span>
+          <span>♫</span>
+          <span>♬</span>
+        </div>
+        <div className="join-content">
+          <p className="eyebrow light">Your voice belongs here</p>
+          <h2 className="light-text">
+            Come sing
+            <br />
+            <em>with us.</em>
+          </h2>
+          <p className="body-copy light-text muted">
+            Discover the joy of serving through music.
+          </p>
+          <Link className="button button-light" href="/join">
+            Join the choir <span>↗</span>
+          </Link>
+        </div>
+      </section>
+    </main>
+  );
 }

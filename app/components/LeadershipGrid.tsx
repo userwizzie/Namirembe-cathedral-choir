@@ -29,7 +29,8 @@ export default function LeadershipGrid() {
 	}, []);
 
 	return <div className="leader-grid">{records.map((leader, index) => <article className="leader-card" key={leader.id}>
-		<div className={`leader-avatar avatar-${(index % 4) + 1}`} style={leader.photo_url ? { backgroundImage: `linear-gradient(0deg, rgba(11,9,10,.45), transparent 60%), url(${leader.photo_url})` } : undefined}>
+		<div className="leader-avatar">
+			<div className={`leader-avatar-bg avatar-${(index % 4) + 1}`} style={leader.photo_url ? { backgroundImage: `linear-gradient(0deg, rgba(11,9,10,.45), transparent 60%), url(${leader.photo_url})` } : undefined} />
 			<span>{initials(leader.name)}</span>
 		</div>
 		<div className="leader-meta"><span>{String(index + 1).padStart(2, "0")}</span><h3>{leader.name}</h3><p>{leader.position}</p>
